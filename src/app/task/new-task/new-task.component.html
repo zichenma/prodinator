@@ -1,0 +1,28 @@
+<form>
+  <h2 md-dialog-tiitle>{{title}}</h2>
+  <div md-dialog-content>
+    <md-input-container class="full-width">
+      <input mdInput type="text" placeholder="task content">
+    </md-input-container>
+    <md-radio-group>
+      <md-radio-button *ngFor="let priority of priorities" [value]="priority.value">
+          {{priority.label}}
+      </md-radio-button>
+    </md-radio-group>
+    <md-input-container class="full-width">
+      <input mdInput [mdDatepicker]="dueDatepicker" type="text" placeholder="Task Due Date">
+      <button type="button" mdSuffix [mdDatepickerToggle]="dueDatepicker"></button>
+    </md-input-container>
+    <md-datepicker #dueDatepicker></md-datepicker>
+
+    <md-input-container class="full-width">
+      <input mdInput [mdDatepicker]="reminderDatepicker" type="text" placeholder="Reminder Date">
+      <button type="button" mdSuffix [mdDatepickerToggle]="reminderDatepicker"></button>
+    </md-input-container>
+    <md-datepicker #reminderDatepicker></md-datepicker>
+  </div>
+  <div md-dialog-actions>
+    <button type="button" md-raised-button color="primary" (click)="onClick()">Save</button>
+    <button type="button" md-button md-dialog-close  (click)="onClose(false)">Cancel</button>
+  </div>
+</form>

@@ -1,0 +1,33 @@
+<!-- this div is a container for horizontally display -->
+<div class="tasklists">
+    <app-task-list 
+    class="list-container" 
+    app-droppable
+    [dropTags]="['task-item', 'task-list']" 
+    [dragEnterClass]="'drag-enter'" 
+    [app-draggable]="true" 
+    [dragTag]="'task-list'"
+    [draggedClass]="'drag-start'" 
+    [dragData]="list" 
+    (dropped)="handleMove($event, list)"
+    [ngStyle]="{'order': list.order}"
+    *ngFor="let list of lists">
+      <app-task-header 
+      [header]="list.name"
+      (newTask)="launchNewTaskDialog()"
+      (moveAll)="launchCopyTaskDialog()"
+      (delList)="launchConfirmDialog()"
+      (onEditList)="lanchEditListDialog()"> 
+    </app-task-header>
+    <app-quick-task (quickTask)="handleQuickTask($event)"></app-quick-task>
+        <app-task-item *ngFor="let task of list.tasks"
+        [item]="task"
+        (taskClick)="launchUpdateTaskDialog(task)">
+        </app-task-item>
+    </app-task-list>
+</div>
+<button class="fab-button" md-fab type="button" (click)="lanchNewListDialog()">
+        <md-icon>add</md-icon>
+</button>
+
+

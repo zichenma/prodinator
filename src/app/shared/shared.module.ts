@@ -1,0 +1,85 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { 
+  MdToolbarModule, 
+  MdIconModule, 
+  MdButtonModule, 
+  MdCardModule,
+  MdInputModule,
+  MdListModule,
+  MdSlideToggleModule,
+  MdDialogModule,
+  MdGridListModule,
+  MdMenuModule,
+  MdAutocompleteModule,
+  MdCheckboxModule,
+  MdTooltipModule,
+  MdDatepickerModule,
+  MdNativeDateModule,
+  MdRadioModule,
+  MdSelectModule,
+  MdSidenavModule,
+} from '@angular/material';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { DirectiveModule } from '../directive/directive.module';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdButtonModule,
+    MdCardModule,
+    MdInputModule,
+    MdListModule,
+    MdSlideToggleModule,
+    MdDialogModule,
+    MdGridListModule,
+    MdAutocompleteModule,
+    MdMenuModule,
+    MdCheckboxModule,
+    MdTooltipModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdRadioModule,
+    MdSelectModule,
+    MdSidenavModule,
+    DirectiveModule,
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdButtonModule,
+    MdCardModule,
+    MdInputModule,
+    MdListModule,
+    MdSlideToggleModule,
+    MdDialogModule,
+    MdGridListModule,
+    MdAutocompleteModule,
+    MdMenuModule,
+    MdCheckboxModule,
+    MdTooltipModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdNativeDateModule,
+    MdRadioModule,
+    MdSelectModule,
+    MdSidenavModule,
+    DirectiveModule,
+    ImageListSelectComponent,
+  ],
+  entryComponents: [ConfirmDialogComponent],
+  declarations: [
+    ConfirmDialogComponent, 
+    ImageListSelectComponent,
+  ]
+})
+export class SharedModule { }

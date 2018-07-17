@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
+  <md-card>
+    <md-card-header>
+    <md-card-title>Login: </md-card-title> 
+    </md-card-header>
+    <md-card-content>
+      <md-input-container class="full-width">
+        <input mdInput type="text" placeholder="Your email" formControlName="email">
+        <md-error>{{form.controls['email'].errors | json}}</md-error>
+      </md-input-container>
+      <md-input-container class="full-width">
+          <input mdInput type="password" placeholder="Your password" formControlName="password">
+        </md-input-container>
+        <button md-raised-button type="submit" [disabled]="!form.valid">Login</button>
+      <md-card-actions class="text-right">
+        <p>No account?<a routerLink="/register">Sign In</a></p>
+        <p>Forget Password?<a href="#">Next</a></p>
+      </md-card-actions>
+    </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-header>
+      <md-card-title>
+        Everyday sentents
+      </md-card-title> 
+      <md-card-subtitle>
+        Hello world!
+      </md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="/assets/img/quote_fallback.jpg" alt="quotes">
+      <md-card-content>
+       Hello world two!
+      </md-card-content>
+    </md-card>
+</form>

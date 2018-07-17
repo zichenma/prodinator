@@ -1,0 +1,40 @@
+.fab-button {
+    position: fixed;
+    right: 32px;
+    bottom: 96px;
+    z-index: 998;
+}
+
+.tasklists {
+    min-width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.list-container {
+    flex: 0 0 360px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.drag-enter {
+    background-color: dimgray;
+}
+
+.drag-start {
+    opacity: 0.5;
+    border: #ff525b dashed 2px;
+  }
+
+  :host {
+    display: flex;
+    flex-direction: column;
+    flex: 1
+  }
+  
+  .task-lists {
+    height: 100%;
+    overflow-x: auto;
+  }

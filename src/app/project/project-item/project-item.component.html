@@ -1,0 +1,25 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>
+      {{item.name}}
+    </md-card-title>
+  </md-card-header>
+  <img md-card-image [src]="item.coverImg" alt="project cover">
+  <md-card-content>
+    {{item.desc}}
+  </md-card-content>
+  <md-card-actions>
+    <button md-button type="button" (click)="onEditClick()">
+     <md-icon>note</md-icon>
+     <span>Edit</span>
+    </button>
+    <button md-button type="button" (click)="onInviteClick()">
+      <md-icon>group_add</md-icon>
+      <span>Invite</span>
+    </button>
+    <button md-button type="button" (click)="onDelClick()">
+      <md-icon>delete</md-icon>
+      <span>Delete</span>
+    </button>
+  </md-card-actions>
+</md-card>

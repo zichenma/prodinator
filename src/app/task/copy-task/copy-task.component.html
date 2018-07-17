@@ -1,0 +1,14 @@
+<form>
+  <h2 md-dialog-tiitle>Move All List Content:</h2>
+  <div md-dialog-content>
+    <md-select placeholder="Please select traget list">
+      <md-option *ngFor="let list of lists">
+          {{list.name}}
+      </md-option>
+    </md-select>
+  </div>
+  <div md-dialog-actions>
+    <button type="button" md-raised-button color="primary" (click)="onClick()">Save</button>
+    <button type="button" md-button md-dialog-close>Close</button>
+  </div>
+</form>

@@ -1,0 +1,23 @@
+<form>
+    <h2 md-dialog-tiitle>Invite Team Members:</h2>
+    <div md-dialog-content>
+      <md-input-container class="full-width">
+        <input mdInput type="text" 
+        placeholder="Team Memeber Last Name"
+        [mdAutocomplete]="autoMembers">
+      </md-input-container> 
+      <!-- <md-input-container class="full-width">
+          <input mdInput type="text" placeholder="Team Memeber Last Name">
+        </md-input-container>  -->
+    </div>
+    <div md-dialog-actions>
+      <button type="button" md-raised-button color="primary" (click)="onClick()">Save</button>
+      <button type="button" md-button md-dialog-close (click)="onClose(false)">Cancel</button>
+    </div>
+  </form>
+  <!-- displayUser is a function not the result of the function -->
+  <md-autocomplete #autoMembers="mdAutocomplete" [displayWith]="displayUser">
+    <md-option *ngFor="let item of items" [value]="item">
+      {{item.name}}
+    </md-option>
+  </md-autocomplete>
