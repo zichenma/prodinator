@@ -1,17 +1,27 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
+import { QuoteService } from '../../services/quote.service';
+import { Quote } from '../../domain/quote.model';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   
   form: FormGroup;
+  quote: Quote = { 
+    cn: '满足感在于不断的努力，而不是现有成就，全心努力定会胜利满满。',
+    en: 'Satisfaction lies in the effort, not in the attainment. Full effort is full victory.',
+    pic:'assets/img/quote_fallback.jpg',
+  };
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private quoteServices$: QuoteService) {
+    this.quoteServices$
+    .getQuote()
+    .subscribe(q => this.quote = q);
+   }
 
   // must initiate all field in FormControl
   ngOnInit() {

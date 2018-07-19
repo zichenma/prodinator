@@ -33,6 +33,11 @@ import 'rxjs/add/operator/take';
     FooterComponent,
     SidebarComponent,
     AppRoutingModule,
+  ],
+  providers: [
+    {provide: 'BASE_CONFIG', useValue: { 
+      uri: 'http://localhost:3000'
+    }},
   ]
 })
 export class CoreModule {
