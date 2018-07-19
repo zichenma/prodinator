@@ -22,15 +22,15 @@
   <md-card>
       <md-card-header>
       <md-card-title>
-        Everyday sentents
+        Daily Sentence
       </md-card-title> 
       <md-card-subtitle>
-        Hello world!
+        {{quote.cn}}
       </md-card-subtitle>
       </md-card-header>
-      <img md-card-image src="/assets/img/quote_fallback.jpg" alt="quotes">
+      <img md-card-image [src]="quote.pic" alt="quote image">
       <md-card-content>
-       Hello world two!
+       {{quote.en}}
       </md-card-content>
     </md-card>
 </form>
