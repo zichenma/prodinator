@@ -14,8 +14,12 @@ export class CopyTaskComponent implements OnInit {
 constructor(@Inject(MD_DIALOG_DATA) private data,
 private dialogRef: MdDialogRef<CopyTaskComponent>) { }
 
-  ngOnInit() {
-    this.lists = this.data.lists;
-  }
+ngOnInit() {
+  this.lists = this.data.lists;
+}
+
+onClick() {
+  
+}
 
 }

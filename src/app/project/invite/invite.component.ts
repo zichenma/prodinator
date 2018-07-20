@@ -39,6 +39,10 @@ export class InviteComponent implements OnInit {
   onClose(result: boolean) {
     this.dialogRef.close(result);
   }
+
+  onClick () {
+    
+  }
   
   // user : {id: string; name: string} eqauls to: 
 

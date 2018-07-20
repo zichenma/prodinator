@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { loadSvgResources } from "../utils/svg.util";
 import 'hammerjs';
 import 'rxjs/add/operator/take';
+import '../utils/debug.util';
 
 
 @NgModule({
