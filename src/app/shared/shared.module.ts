@@ -20,10 +20,12 @@ import {
   MdRadioModule,
   MdSelectModule,
   MdSidenavModule,
+  MdButtonToggleModule,
 } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
+// import { AgeInputComponent } from './age-input/age-input.component';
 
 @NgModule({
   imports: [
@@ -49,6 +51,7 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     MdSelectModule,
     MdSidenavModule,
     DirectiveModule,
+    MdButtonToggleModule,
   ],
   exports: [
     CommonModule,
@@ -75,11 +78,14 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     MdSidenavModule,
     DirectiveModule,
     ImageListSelectComponent,
+    // AgeInputComponent,
+    MdButtonToggleModule,
   ],
   entryComponents: [ConfirmDialogComponent],
   declarations: [
     ConfirmDialogComponent, 
-    ImageListSelectComponent,
+    // ImageListSelectComponent, AgeInputComponent,
+    ImageListSelectComponent
   ]
 })
 export class SharedModule { }

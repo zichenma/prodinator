@@ -2,7 +2,7 @@ import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { MdIconRegistry} from '@angular/material';
 import { DomSanitizer } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SharedModule} from "../shared/shared.module";
 import { AppRoutingModule } from '../app-routing.module';
 import { ServicesModule } from '../services/services.module';

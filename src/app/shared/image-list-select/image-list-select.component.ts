@@ -38,15 +38,20 @@ export class ImageListSelectComponent implements ControlValueAccessor {
     this.selected = i;
   }
 
+  // ControlValueAccessor interface must contain three methods:
+
   writeValue(obj: any) : void {
     this.selected = obj;
     this.propagateChange(this.selected);
   }
 
+  // registerOnChange broadcast the changes from self to outside
+
   registerOnChange(fn: any) : void {
     this.propagateChange = fn;
   }
-
+  
+  
   registerOnTouched(fn: any) : void {} 
 
   validate(c: FormControl) : {[key: string] : any} {

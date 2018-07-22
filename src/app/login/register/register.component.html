@@ -19,11 +19,6 @@
         <md-input-container class="full-width">
             <input mdInput type="password" placeholder="Repeated your password">
         </md-input-container>
-          <!-- <md-grid-list cols="6" rowHeight="1:1" >
-            <md-grid-tile *ngFor="let item of items">
-              <md-icon class="avatar" [svgIcon]="item"></md-icon>
-            </md-grid-tile>
-          </md-grid-list> -->
           <app-image-list-select
           [useSvgIcon]="true"
           [cols]="6"
@@ -31,7 +26,7 @@
           [items]="items"
           formControlName="avatar">
           </app-image-list-select>
-      
+          <!-- <app-age-input formControlName="dateOfBirth"></app-age-input> -->
           <button md-raised-button type="submit">Register</button>
         <md-card-actions class="text-right">
           <p>No account?<a href="#">Login In</a></p>
