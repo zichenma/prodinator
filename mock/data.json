@@ -1,4 +1,20 @@
-{
+{   
+    "projects": [
+      {
+        "id" : "1",
+        "name" : "Enterprise Coordinator",
+        "desc" : "This is an interal project",
+        "coverImg" : "assets/img/covers/0.jpg",
+        "memebers": ["1", "2"]
+      },
+      {
+        "id" : "2",
+        "name" : "Auto Testing Project",
+        "desc" : "This is an interal project",
+        "coverImg" : "assets/img/covers/1.jpg",
+        "memebers": ["1"]
+      }
+    ],
     "quotes": [
     {
       "id": "0",

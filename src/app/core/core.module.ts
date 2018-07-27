@@ -11,7 +11,14 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { loadSvgResources } from "../utils/svg.util";
 import 'hammerjs';
+import 'rxjs/add/observable/combineLatest';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/count';
 import 'rxjs/add/operator/take';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/combineLatest';
+import 'rxjs/add/operator/mapTo';
 import '../utils/debug.util';
 
 
