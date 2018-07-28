@@ -1,21 +1,26 @@
-{   
-    "projects": [
-      {
-        "id" : "1",
-        "name" : "Enterprise Coordinator",
-        "desc" : "This is an interal project",
-        "coverImg" : "assets/img/covers/0.jpg",
-        "memebers": ["1", "2"]
-      },
-      {
-        "id" : "2",
-        "name" : "Auto Testing Project",
-        "desc" : "This is an interal project",
-        "coverImg" : "assets/img/covers/1.jpg",
-        "memebers": ["1"]
-      }
-    ],
-    "quotes": [
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Enterprise Coordinator",
+      "desc": "This is an interal project",
+      "coverImg": "assets/img/covers/0.jpg",
+      "memebers": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Auto Testing Project",
+      "desc": "This is an interal project",
+      "coverImg": "assets/img/covers/1.jpg",
+      "memebers": [
+        "1"
+      ]
+    }
+  ],
+  "quotes": [
     {
       "id": "0",
       "cn": "我突然就觉得自己像个华丽的木偶,演尽了所有的悲欢离合,可是背上总是有无数闪亮的银色丝线,操纵我哪怕一举手一投足。",
@@ -76,5 +81,6 @@
       "en": "I have always been delighted at the prospect of a new day, a fresh try, one more start, with perhaps a bit of magic waiting somewhere behind the morning.",
       "pic": "/assets/img/quotes/9.jpg"
     }
-  ]
+  ],
+  "taskLists": []
 }
