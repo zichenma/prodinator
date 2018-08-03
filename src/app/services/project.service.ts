@@ -38,7 +38,7 @@ export class ProjectService {
 
     // DELETE
     del(project: Project): Observable<Project> {
-       const delTasks$ = Observable.from(project.taskLists)
+       const delTasks$ = Observable.from(project.taskLists ? project.taskLists : [])
        // if a new tasklist id comes, we will continue to delete old tasklist
        // so here we using mergeMap and wants to delete tasklists clean
        .mergeMap(listId => this.http.delete(`${this.config.uri}/taskLists/${listId}`))

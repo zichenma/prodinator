@@ -1,15 +1,22 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
   <h3 md-dialog-tiitle>{{title}}</h3>
   <div md-dialog-content>
     <md-input-container class="full-width">
-      <input mdInput type="text" placeholder="Project Name">
+      <input mdInput type="text" placeholder="Project Name" formControlName="name">
     </md-input-container> 
     <md-input-container class="full-width">
-        <input mdInput type="text" placeholder="Project Description">
-      </md-input-container> 
+        <input mdInput type="text" placeholder="Project Description" formControlName="desc">
+    </md-input-container> 
+    <app-image-list-select
+      [useSvgIcon]="false"
+      [cols]="6"
+      [title]="Cover"
+      [items]="coverImages"
+      formControlName="coverImg">
+    </app-image-list-select>
   </div>
   <div md-dialog-actions>
-    <button type="button" md-raised-button color="primary" (click)="onClick()">Save</button>
+    <button type="submit" md-raised-button color="primary" [disabled]="!form.valid">Save</button>
     <button type="button" md-button md-dialog-close  (click)="onClose(false)">Close</button>
   </div>
 </form>
