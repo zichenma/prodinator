@@ -110,6 +110,8 @@ displayUser (user: User): string {
   return user ? user.name : '';
 }
 
+
+
 get displayInput() {
   return this.multiple || (this.items.length === 0);
 }
