@@ -19,7 +19,6 @@ import {
   differenceInYears,
   parse
 } from 'date-fns';
-import {Observable} from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { convertToDate, isValidDate } from '../../utils/date.util';
 import { map, distinctUntilChanged, filter, debounceTime, startWith } from 'rxjs/operators';

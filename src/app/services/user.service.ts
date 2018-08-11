@@ -11,12 +11,12 @@ export class UserService {
         'Content-Type': 'application/json'
     });
     constructor(private http: Http, @Inject('BASE_CONFIG') private config){}
+    
     searchUsers(filter: string) : Observable<User[]> {
         const uri = `${this.config.uri}/${this.domain}`;
         return this.http
                 .get(uri, {params: {'email_like' : filter}})
                 .map(res => res.json() as User[]);
-        
     }
 
     getUsersByProject(projectId: string) : Observable<User[]> {
