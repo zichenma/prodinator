@@ -37,4 +37,8 @@ export class NewTaskComponent implements OnInit {
     this.dialogRef.close(result);
   }
 
+  onClick () {
+    console.log('click new task')
+  }
+
 }

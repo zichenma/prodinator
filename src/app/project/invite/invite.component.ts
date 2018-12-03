@@ -39,6 +39,10 @@ export class InviteComponent implements OnInit {
   onClose(result: boolean) {
     this.dialogRef.close(result);
   }
+
+  onClick () {
+    console.log('click invite')
+  }
   
   // user : {id: string; name: string} eqauls to: 
 

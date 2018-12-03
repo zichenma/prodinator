@@ -18,4 +18,8 @@ private dialogRef: MdDialogRef<CopyTaskComponent>) { }
     this.lists = this.data.lists;
   }
 
+  onClick () {
+    console.log('click copy task')
+  }
+
 }

@@ -26,4 +26,9 @@ export class RegisterComponent implements OnInit {
     })
   }
 
+  onSubmit(form, $event) {
+    console.log(form);
+    console.log($event);
+  }
+
 }
